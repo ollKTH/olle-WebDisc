@@ -1,0 +1,12 @@
+{% extends 'base.html'  %}
+
+{% block title %} WebDisc | Users {% endblock %}
+
+{% block content %}
+    <p>This is some users</p>
+    <!-- Print users -->
+    {% for user in users %}
+        <p>{{ user.name }}</p>
+    {% endfor %}
+
+{% endblock %}

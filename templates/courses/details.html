@@ -1,0 +1,16 @@
+{% extends 'base.html'  %}
+
+{% block title %} WebDisc | {{ course.name }} {% endblock %}
+
+{% block content %}
+    <div class="course_header">
+    <p>This is some course</p>
+    <p>{{ course.name }} | {{ course.location }}</p>
+    </div>
+    <hr>
+    <div class="holes">
+    {% for hole in course.hole_set.all %}
+        <p>{{ hole.number }} | {{ hole.par }}</p>
+    {% endfor %}
+    </div>
+{% endblock %}

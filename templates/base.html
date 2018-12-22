@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}WebDisc{% endblock %}</title>
+</head>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+        vertical-align: center;
+    }
+</style>
+<body>
+    <div class="content">
+        <div class="menu">
+            <p><a href="{% url 'welcome:index' %}">Home</a> | <a href="{% url 'courses:index' %}">Courses</a> | <a href="{% url 'users:index' %}">Users</a></p>
+            <hr>
+        </div>
+        <div class="text">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

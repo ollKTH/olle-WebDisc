@@ -1,0 +1,10 @@
+{% extends 'base.html'  %}
+
+{% block title %} WebDisc | Courses {% endblock %}
+
+{% block content %}
+    <p>This is some courses</p>
+    {% for course in courses %}
+        <p><a href="{% url 'courses:details' course.id %}">{{ course.name }}</a></p>
+    {% endfor %}
+{% endblock %}
